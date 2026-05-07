@@ -3,6 +3,7 @@ import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
+import json
 
 # ------------------------
 # 🔗 CONEXIÓN GOOGLE SHEETS
@@ -10,7 +11,12 @@ from datetime import datetime
 scope = ["https://spreadsheets.google.com/feeds",
          "https://www.googleapis.com/auth/drive"]
 
-creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
+if "gcp_service_account" in st.secrets:
+    creds_dict = dict(st.secrets["gcp_service_account"])
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+else:
+    creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
+
 client = gspread.authorize(creds)
 
 SHEET_ID = "18qN6miXJOTj46FZfRKxQ4Lpcx3BB-MXg-aNJvc96kLc"
