@@ -6,7 +6,7 @@ Aplicación para gestionar el control logístico de equipos, permitiendo registr
 ## Requisitos
 - Python 3.x
 - Flask (o framework web utilizado)
-- Base de datos (SQLite/PostgreSQL)
+- Google Sheets
 
 ## Instalación
 
