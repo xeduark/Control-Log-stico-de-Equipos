@@ -78,3 +78,5 @@ Este proyecto está bajo licencia MIT.
 ## Soporte
 
 Para reportar problemas o sugerencias, crear un issue en el repositorio.
+<img width="1880" height="851" alt="image" src="https://github.com/user-attachments/assets/b6c8bdec-c82c-4739-a725-ed8f9d4390fe" />
+
